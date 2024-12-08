@@ -1,0 +1,137 @@
+:root {
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey700: hsl(0, 0%, 20%);
+    --Grey800: hsl(0, 0%, 12%);
+    --Grey900: hsl(0, 0%, 8%);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; /* Обеспечивает высоту на весь экран */
+    background-color: var(--Grey900);
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    max-width: 400px;
+    background-color: var(--Grey800);
+    border-radius: 12px;
+    padding: 30px 20px;
+    margin: auto; /* Центрирует блок по вертикали и горизонтали */
+    box-sizing: border-box;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.avatar img {
+    border-radius: 50%; 
+    width: 60%; 
+    height: auto; 
+    max-width: 150px;
+}
+
+h1 {
+    margin-bottom: 0;
+    color: var(--White);
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h2 {
+    margin-top: 7px;
+    color: var(--Green);
+    font-size: 19px;
+    font-weight: 600;
+}
+
+p {
+    color: var(--White);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 10px; 
+    height: 45px;
+    padding: 10px 20px; 
+    background-color: var(--Grey700);
+    color: var(--White);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+button:hover, button:focus {
+    background-color: var(--Green);
+}
+
+button:active {
+    background-color: var(--Grey700);
+}
+
+.attribution {
+    color: var(--White);
+    margin-top: auto;
+}
+
+@media (max-width: 418px) {
+    .menu {
+        padding: 15px;
+    }
+
+    .avatar img {
+        width: 50%;
+        max-width: 120px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .btns button {
+        font-size: 16px;
+        height: 40px;
+    }
+}
